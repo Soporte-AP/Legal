@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad – MiFinanzas App</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f9fafb;
+      color: #1f2937;
+      line-height: 1.7;
+    }
+    header {
+      background: #2563eb;
+      color: white;
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+    header h1 { font-size: 1.8rem; font-weight: 800; }
+    header p  { font-size: 0.9rem; opacity: 0.85; margin-top: 6px; }
+    main {
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+      border: 1px solid #e5e7eb;
+    }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #2563eb;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h2 .num {
+      background: #eff6ff;
+      color: #2563eb;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    p { margin-bottom: 10px; font-size: 0.95rem; color: #374151; }
+    ul { padding-left: 20px; margin-bottom: 10px; }
+    li { margin-bottom: 6px; font-size: 0.95rem; color: #374151; }
+    .highlight {
+      background: #eff6ff;
+      border-left: 4px solid #2563eb;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 0.92rem;
+      color: #1e40af;
+    }
+    .badge {
+      display: inline-block;
+      background: #dcfce7;
+      color: #166534;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #9ca3af;
+      padding: 24px;
+    }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Política de Privacidad</h1>
+  <p>MiFinanzas App &nbsp;·&nbsp; Última actualización: junio 2025</p>
+</header>
+
+<main>
+
+  <div class="card">
+    <span class="badge">✓ Sin servidores propios</span>
+    <p>
+      En <strong>MiFinanzas App</strong> nos tomamos tu privacidad muy en serio.
+      Esta política explica qué información maneja la app, cómo se almacena
+      y cuáles son tus derechos como usuario.
+    </p>
+    <div class="highlight">
+      <strong>Resumen rápido:</strong> Todos tus datos financieros se guardan
+      <em>únicamente en tu dispositivo</em>. No los enviamos a ningún servidor,
+      no los vendemos y no los compartimos con terceros.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">1</span> Responsable del tratamiento</h2>
+    <p>
+      <strong>MiFinanzas App</strong> es desarrollada y mantenida de forma independiente.<br>
+      Contacto: <a href="mailto:soporte@misfinanzas.com">soporte@misfinanzas.com</a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">2</span> Datos que la app maneja</h2>
+    <p>La app procesa los siguientes datos <strong>de forma local en tu dispositivo</strong>:</p>
+    <ul>
+      <li>Transacciones financieras (ingresos y gastos) que tú introduces manualmente.</li>
+      <li>Categorías de gasto, metas de ahorro y presupuestos.</li>
+      <li>Información de tarjetas (solo nombre, últimos 4 dígitos y tipo).</li>
+      <li>Configuración de perfil (nombre del perfil y color).</li>
+      <li>Preferencias de la aplicación (moneda seleccionada, etc.).</li>
+    </ul>
+    <div class="highlight">
+      La app <strong>NO</strong> solicita ni accede a números de cuenta completos,
+      contraseñas bancarias, datos biométricos ni información de ubicación.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">3</span> Dónde se almacenan tus datos</h2>
+    <p>
+      Toda la información se guarda exclusivamente en el almacenamiento
+      interno de tu dispositivo mediante:
+    </p>
+    <ul>
+      <li><strong>SharedPreferences</strong> — para configuración y preferencias.</li>
+      <li><strong>Flutter Secure Storage</strong> — para transacciones y metas,
+          usando cifrado del sistema operativo (Keychain en iOS,
+          EncryptedSharedPreferences en Android).</li>
+    </ul>
+    <p>
+      Los datos <strong>nunca salen de tu dispositivo</strong> de forma automática.
+      Solo tú puedes exportarlos manualmente mediante la función de respaldo.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">4</span> Función de exportación / importación</h2>
+    <p>
+      La app incluye una función opcional para exportar un archivo de respaldo (<code>.json</code>).
+      Al usarla, debes tener en cuenta que:
+    </p>
+    <ul>
+      <li>El archivo contiene tus datos financieros en texto plano.</li>
+      <li>La app te advierte de esto antes de generar el archivo.</li>
+      <li>Eres responsable de dónde guardas y con quién compartes ese archivo.</li>
+      <li>Recomendamos guardarlo en almacenamiento personal privado
+          (Google Drive privado, iCloud personal).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">5</span> Servicios de terceros</h2>
+    <p>
+      La app <strong>no integra</strong> servicios de analítica, publicidad,
+      redes sociales ni rastreo de comportamiento.
+    </p>
+    <p>
+      El único acceso a internet ocurre cuando el usuario pulsa "Política de Privacidad"
+      en los ajustes, lo que abre esta página en el navegador del sistema.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">6</span> Permisos que solicita la app</h2>
+    <ul>
+      <li>
+        <strong>Almacenamiento (Android ≤ 12)</strong> — necesario para que
+        <em>file_picker</em> pueda importar archivos de respaldo.
+      </li>
+      <li>
+        <strong>Internet</strong> — únicamente para abrir enlaces (política de privacidad)
+        en el navegador del sistema. No se usa para enviar datos.
+      </li>
+    </ul>
+    <p>No se solicitan permisos de cámara, micrófono, ubicación ni contactos.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">7</span> Menores de edad</h2>
+    <p>
+      MiFinanzas App no está dirigida a menores de 13 años y no recopila
+      datos de menores de forma intencionada. Si eres padre o tutor y crees
+      que tu hijo ha usado la app, puedes eliminar todos los datos desde
+      <em>Ajustes → Reiniciar toda la app</em>.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">8</span> Tus derechos</h2>
+    <p>Dado que los datos se almacenan localmente en tu dispositivo, tú tienes control total:</p>
+    <ul>
+      <li><strong>Acceso:</strong> puedes ver todos tus datos directamente en la app.</li>
+      <li><strong>Rectificación:</strong> puedes editar cualquier dato en cualquier momento.</li>
+      <li><strong>Eliminación:</strong> usa <em>Ajustes → Reiniciar toda la app</em>
+          para borrar todo de forma permanente.</li>
+      <li><strong>Portabilidad:</strong> exporta tus datos en formato JSON
+          desde los ajustes.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">9</span> Cambios en esta política</h2>
+    <p>
+      Podemos actualizar esta política ocasionalmente. Cualquier cambio relevante
+      se notificará a través de una actualización de la app en la tienda.
+      La fecha de la última modificación siempre aparece en la cabecera de esta página.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">10</span> Contacto</h2>
+    <p>
+      Para cualquier pregunta relacionada con tu privacidad, escríbenos a:<br>
+      <a href="mailto:soporte@misfinanzas.com">soporte@misfinanzas.com</a>
+    </p>
+    <p>Intentaremos responder en un plazo máximo de 30 días.</p>
+  </div>
+
+</main>
+
+<footer>
+  © 2025 MiFinanzas App &nbsp;·&nbsp; Todos los derechos reservados
+</footer>
+
+</body>
+</html>
